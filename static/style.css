@@ -1,0 +1,113 @@
+body{
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+	background-color: #4c4c4c;
+}
+
+.container{
+    max-width: 900px;
+	margin: 0 auto;
+	background-color: #313438;
+	min-height: 100vh;
+}
+
+a{
+	text-decoration: none;
+}
+
+.name{
+    font-size : 3em;
+}
+
+.header{
+	display: flex;
+	justify-content: space-evenly;
+	color: #fff;
+	background: linear-gradient(90deg, rgb(101 172 251) 0%, rgba(154,173,89,1) 100%);
+	padding: 1em 0;
+	align-items: center;
+}
+
+.candidates-search{
+	font-size: 1.2em;
+	padding:.3em .3em;
+	border-radius: 100px;
+	border:1px solid white;
+	outline: none;
+	height:40px;
+    border:none;
+    width:400px;
+}
+.submit-search{
+	font-size: 1em;
+	border-radius: 100px;
+	border:1px solid white;
+	outline: none;
+	background: #8aa778;
+}
+
+.candidates-library{
+	background: #313438;
+}
+
+.add{
+	color: #fff;
+	font-size: 1.5em;
+}
+
+i{
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.candidate-name{
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+
+ul{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+hr{
+	border: 1px solicontactd #494a4b;
+}
+
+.list__item{
+	list-style: none;
+}
+
+.candidate-title{
+	color: #fff;
+}
+.candidate-skills{
+    width: fit-content;
+	text-align: center;
+	padding: .4em .5em;
+	border-radius: 100px;
+	margin: 0;
+	background-color: #3b96b1;
+	display:inline-block;
+	margin-right:10px;
+	color: #fff;
+}
+
+.candidates-section{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1.5em;
+	transition: 0.3s;
+}
+
+.candidates-section:hover{
+	background-color: #48494a;
+}
+
+.text{
+	padding-left: 1em;
+}

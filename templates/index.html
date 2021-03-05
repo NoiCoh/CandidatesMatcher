@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+
+	<title>Candidates Finder</title>
+</head>
+<body>
+
+	<div class="container">
+		<header class="header">
+			<div class="hero-info">
+				<h1 class="name">Candidate Finder</h1>
+			</div>
+		</header>
+		<!--  SEARCH FORM -->
+		<header class="header">
+			<form action="/" method='GET' class="search-bar" id="search-form">
+				<select type="search-name" class="candidates-search" name="search-area" placeholder="Find Candidate">
+					<option disabled selected value> -- Select a job -- </option>
+					{% for job in jobs %}
+						<option value='{{job.id}}'>{{job}} ({{ job.Company }})</option>
+					{% endfor %}
+				</select>
+				 <input type="submit" class="submit-search" value="Match"/>
+			</form>
+		</header>
+
+		<!--  CANDIDATE LIST -->
+		<section class="candidates-library">
+			<ul class="candidates-list">
+				{% for candidate in candidates reversed %}
+
+				<a>
+
+					<div class="candidates-section">
+						<li class="list__item">
+
+							<p class="candidate-name">{{ candidate.full_name | title }}</p>
+							<p class="candidate-title">{{ candidate.title | title }}</p>
+						</li>
+						<li id="call" class="list__item">
+							{% for skill in candidate.skills.all %}
+								<p class="candidate-skills"> {{ skill.name }}
+								{% endfor %}
+						</li>
+					</div>
+				</a>
+
+				<hr>
+
+				{% empty %}
+				<h3 style="color:#fff;padding:20px;">No candidate found..</h3>
+				{% endfor %}
+			</ul>
+		</section>
+	</div>
+
+</body>
+</html>
