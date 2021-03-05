@@ -16,7 +16,7 @@
 <img src="img/1.JPG" width="70%" height="70%" hover title="candidatefinder">
 <img src="img/2.jpg" width="70%" height="70%" hover title="candidatefinderchoose">
 
-Choose a job and get back the best ones for the Job. Considerations:
+Choose a job and get the best candidates for this Job. Considerations:
 - Title match - for example, a "software developer" candidate is good for a "software developer" job
 - Having as many skill matches as possible.
 
